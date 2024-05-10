@@ -1,0 +1,239 @@
+@import "../config/media-breakpoints";
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	padding: 18px 0;
+	background-color: #16151f;
+	background-image: url("../images/header-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include media-breakpoint-down(sm) {
+		background-image: none;
+		background-color: #242332;
+		padding: 0;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 98%;
+		margin: 0 auto;
+
+		@include media-breakpoint-up(xxl) {
+			width: 77%;
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		border-radius: 50px;
+		padding: 0 22px 0 10px;
+		position: relative;
+		height: 54px;
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 50px;
+			padding: 2px;
+			mask:
+				linear-gradient(#fff 0 0) content-box,
+				linear-gradient(#fff 0 0);
+			mask-composite: exclude;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+
+			&::before {
+				content: none;
+			}
+		}
+	}
+
+	&__back::before {
+		background: linear-gradient(to right, #9794c6 0%, transparent 82%);
+		opacity: 0.1;
+	}
+
+	&__home::before {
+		background: linear-gradient(to left, #9794c6 0%, transparent 82%);
+		opacity: 0.1;
+	}
+
+	&__button-text {
+		font-family: LeksaSansPro, sans-serif;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+
+	&__profile {
+		display: flex;
+	}
+
+	&__profile-coins {
+		margin-right: 80px;
+
+		@include media-breakpoint-down(sm) {
+			margin-right: 26px;
+		}
+
+		.balance__icon {
+			left: -19px;
+
+			@include media-breakpoint-down(sm) {
+				left: -12px;
+			}
+		}
+	}
+
+	&__profile-crystals {
+		.balance__icon {
+			left: -40px;
+
+			@include media-breakpoint-down(sm) {
+				left: -11px;
+			}
+		}
+	}
+
+	.balance {
+		background-color: rgba(#0d0b0f, 0.5);
+		border-radius: 100px;
+		padding: 6px 20px 6px 54px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 170px;
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			min-width: 70px;
+			padding: 2px 0 2px 20px;
+		}
+
+		&__icon {
+			position: absolute;
+			top: 50%;
+			transform: translate3d(0, -50%, 0);
+
+			@include media-breakpoint-down(sm) {
+				width: 30px;
+			}
+		}
+
+		&__info {
+			margin-right: 6px;
+		}
+
+		&__info-amount {
+			font-family: LeksaSansPro, sans-serif;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 1.1;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 13px;
+				white-space: nowrap;
+			}
+		}
+
+		&__info-text {
+			font-size: 10px;
+			font-family: Roboto, sans-serif;
+			font-weight: 500;
+			color: #b9b7ea;
+
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+
+		&__button {
+			min-width: 25px;
+			min-height: 25px;
+			border: 1px solid #21cc14;
+			border-radius: 5px;
+			background: linear-gradient(to top, #30c325 0%, #2c812a 100%);
+			position: relative;
+			transition: opacity 0.3s;
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				border-radius: 5px;
+			}
+
+			&::before {
+				background-color: #21cc14;
+				filter: blur(20px);
+				width: 19px;
+				height: 19px;
+				top: 5px;
+				left: 3px;
+			}
+
+			&::after {
+				background: linear-gradient(to top, #30c325 0%, #2c812a 100%);
+				top: 2px;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+			}
+
+			@include media-breakpoint-down(sm) {
+				min-width: 20px;
+				min-height: 20px;
+			}
+		}
+
+		&__button-icon {
+			&::before,
+			&::after {
+				content: "";
+				background-color: #fff;
+				width: 13px;
+				height: 3px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate3d(-50%, -50%, 0);
+			}
+
+			&::after {
+				transform: translate3d(-50%, -50%, 0) rotate(90deg);
+			}
+
+			@include media-breakpoint-down(sm) {
+				&::before,
+				&::after {
+					width: 10px;
+					height: 2px;
+				}
+			}
+		}
+	}
+}

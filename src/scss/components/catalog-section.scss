@@ -1,0 +1,117 @@
+@import "../config/media-breakpoints";
+
+.catalog-section {
+	background-color: #242333;
+	padding: 24px 26px 30px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 20px 30px 0 rgba(#000, 0.5);
+	overflow: hidden;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin: 0 30px;
+		border-radius: 10px;
+		padding: 18px 11px;
+	}
+
+	&__crystals {
+		padding-bottom: 30px;
+		position: relative;
+		margin-bottom: 30px;
+
+		&::after {
+			content: "";
+			background-color: rgba(#9794c6, 0.1);
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: -26px;
+			right: -26px;
+
+			@include media-breakpoint-down(sm) {
+				left: -11px;
+				right: -11px;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.section {
+		&__title {
+			font-family: LeksaSansPro, sans-serif;
+			font-weight: 700;
+			font-size: 30px;
+			text-align: center;
+			margin-bottom: 20px;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 20px;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__items {
+			display: grid;
+			grid-gap: 20px 4px;
+			grid-template-columns: repeat(5, 1fr);
+
+			@include media-breakpoint-down(xl) {
+				grid-template-columns: repeat(4, 1fr);
+			}
+
+			@include media-breakpoint-down(lg) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			@include media-breakpoint-down(sm) {
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 10px;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				grid-template-columns: repeat(7, 1fr);
+			}
+
+			@include media-breakpoint-up(xxxl) {
+				grid-template-columns: repeat(8, 1fr);
+			}
+
+			@include media-breakpoint-up(xxxxl) {
+				grid-template-columns: repeat(9, 1fr);
+			}
+		}
+	}
+}
+
+@keyframes animation-in {
+	0% {
+		transform: translate3d(0, 1%, 0);
+		opacity: 0.4;
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes animation-out {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate3d(0, 1%, 0);
+		opacity: 0.4;
+	}
+}

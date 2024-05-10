@@ -1,0 +1,51 @@
+<div class="catalog">
+	<div class="catalog__wrapper">
+		<div class="catalog__tabs">
+			<div class="catalog__tab active" data-tab="monster">
+				<div class="catalog__tab-inner">
+					Монстр Боксы
+				</div>
+			</div>
+			<div class="catalog__tab" data-tab="bank">
+				<div class="catalog__tab-inner">
+					Банк
+				</div>
+			</div>
+			<div class="catalog__tab" data-tab="sets">
+				<div class="catalog__tab-inner">
+					Наборы
+				</div>
+			</div>
+			<div class="catalog__tab" data-tab="offer">
+				<div class="catalog__tab-inner">
+					Спецпредложения
+				</div>
+			</div>
+			<div class="catalog__tab" data-tab="promo">
+				<div class="catalog__tab-inner">
+					Промокоды
+				</div>
+			</div>
+		</div>
+		@@include('catalog-section.html', {
+			id: "monster",
+			active: "active"
+		})
+		@@include('catalog-section.html', {
+			id: "bank",
+			active: ""
+		})
+		@@include('catalog-section.html', {
+			id: "sets",
+			active: ""
+		})
+		@@include('catalog-section.html', {
+			id: "offer",
+			active: ""
+		})
+		@@include('catalog-section.html', {
+			id: "promo",
+			active: ""
+		})
+	</div>
+</div>

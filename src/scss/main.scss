@@ -1,0 +1,37 @@
+@import "./config/reset";
+@import "./config/scrollbar";
+@import "./config/fonts";
+@import "./config/media-breakpoints";
+@import "components/index";
+
+body {
+	overflow-x: hidden;
+	font-family: Roboto, sans-serif;
+	color: #fff;
+	background-image: url("../images/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	@include media-breakpoint-down(sm) {
+		background-image: url("../images/mobile-bg.jpg");
+	}
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 5px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+	position: relative;
+	flex: 1 1 auto;
+	padding-bottom: 10px;
+}
