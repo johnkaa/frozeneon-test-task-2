@@ -124,19 +124,9 @@
 			transition: opacity 0.3s;
 		}
 
-		@media (hover: hover) {
-			&:hover {
-				&::before {
-					opacity: 0;
-				}
-			}
-		}
-
-		@media (hover: none) {
-			&:active {
-				&::before {
-					opacity: 0;
-				}
+		&:hover {
+			&::before {
+				opacity: 0;
 			}
 		}
 
