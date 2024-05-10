@@ -106,6 +106,21 @@ button {
   transform: translate3d(-50%, -50%, 0);
   z-index: -1;
 }
+@media (max-width: 767px) {
+  .card__ribbon.show::before {
+    width: 75px;
+    height: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .card__ribbon.show {
+    font-size: 11px;
+    width: 86px;
+    height: 20px;
+    top: 13px;
+    left: -19px;
+  }
+}
 .card__image {
   height: 120px;
   display: flex;
