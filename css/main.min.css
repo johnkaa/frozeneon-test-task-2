@@ -179,15 +179,8 @@ button {
   border-radius: 146px;
   transition: opacity 0.3s;
 }
-@media (hover: hover) {
-  .card__buy:hover::before {
-    opacity: 0;
-  }
-}
-@media (hover: none) {
-  .card__buy:active::before {
-    opacity: 0;
-  }
+.card__buy:hover::before {
+  opacity: 0;
 }
 @media (max-width: 575px) {
   .card__buy {
