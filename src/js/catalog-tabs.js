@@ -28,13 +28,13 @@ function handleTabClick(event) {
 	const prevSectionInner = prevSection.querySelector('.catalog-section__inner');
 	const nextSectionInner = nextSection.querySelector('.catalog-section__inner');
 
-	prevSectionInner.style.animation = 'animation-out .5s';
+	prevSectionInner.style.animation = 'animation-out .3s';
 	prevSectionInner.addEventListener('animationend', prevSectionAnimationEnd);
 
 	function prevSectionAnimationEnd() {
 		prevSection.classList.remove('active');
 		nextSection.classList.add('active');
-		nextSectionInner.style.animation = 'animation-in .5s';
+		nextSectionInner.style.animation = 'animation-in .3s';
 		prevSectionInner.removeEventListener('animationend', prevSectionAnimationEnd);
 		isFetching = false;
 	}
