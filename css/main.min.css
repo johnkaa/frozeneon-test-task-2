@@ -243,7 +243,7 @@ button {
 .catalog__tab {
   color: #9794c6;
   cursor: pointer;
-  font-family: LeksaSansPro, sans-serif;
+  font-family: LeksaSansPro, serif;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
@@ -374,7 +374,7 @@ button {
   }
 }
 .catalog-section .section__title {
-  font-family: LeksaSansPro, sans-serif;
+  font-family: LeksaSansPro, serif;
   font-weight: 700;
   font-size: 30px;
   text-align: center;
@@ -510,7 +510,7 @@ button {
   opacity: 0.1;
 }
 .header__button-text {
-  font-family: LeksaSansPro, sans-serif;
+  font-family: LeksaSansPro, serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -577,7 +577,7 @@ button {
   margin-right: 6px;
 }
 .header .balance__info-amount {
-  font-family: LeksaSansPro, sans-serif;
+  font-family: LeksaSansPro, serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.1;
